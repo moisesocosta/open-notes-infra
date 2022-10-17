@@ -1,1 +1,1 @@
-# open-api-infra
+# open-notes-infra
