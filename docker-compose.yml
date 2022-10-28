@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   frontend:
-    image: gabrock/open-api-frontend
+    image: gabrock/open-notes-frontend
     ports:
       - "3000:3000"
     links:
