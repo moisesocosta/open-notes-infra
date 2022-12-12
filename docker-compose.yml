@@ -4,23 +4,23 @@ services:
     image: gabrock/open-notes-frontend
     ports:
       - "3000:3000"
-    links:
-      - "backend:api"
-  backend:
+  api:
     image: moisesocosta/open-notes-api
     ports:
       - "8000:8000"
-    links:
-      - "database:db"
     environment:
-      DATABASE_HOST: db
+      DATABASE_HOST: database
     depends_on:
       - database
   database:
     image: postgres:14-alpine
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_PASSWORD: password
     volumes:
       - db-data:/var/lib/postgresql/data/
 volumes:
   db-data:
+
+
